@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <title>SILENT CONVERSATION</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files  -->
+    <link href="../static/assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="../static/assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="../static/assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      href="../static/assets/vendor/boxicons/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="../static/assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="../static/assets/vendor/remixicon/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      href="../static/assets/vendor/swiper/swiper-bundle.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap"
+      rel="stylesheet"
+    />  
+    <!-- Template Main CSS File -->
+    <link href="../static/assets/css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    {% if scroll %}
+    <script>
+      // document.getElementById("{{ scroll }}").scrollIntoView();
+      console.log("scroll called");
+      // or
+      document.location.hash = "#" + "{{ scroll }}";
+    </script>
+    {% endif %}
+    
+
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="d-flex align-items-center justify-content-center">
+      <div class="container" data-aos="fade-up">
+        <div
+          class="row justify-content-center"
+          data-aos="fade-up"
+          data-aos-delay="150"
+        >
+          <div class="col-xl-6 col-lg-8">
+            <h1>Silent Conversation</h1>
+            
+          </div>
+        </div>
+
+        <div
+          class="row gy-4 mt-5 justify-content-center"
+          data-aos="zoom-in"
+          data-aos-delay="250"
+        >
+        <div class="col-xl-2 col-md-4">
+          <div class="icon-box">
+           <strong> <a href="#text2sign">Text to Sign</a></strong>
+        </div></div>
+        <div class="col-xl-2 col-md-4">
+          <div class="icon-box">
+        <strong><a href="#sign2text">Sign to Text</a></strong>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Hero -->
+
+    <main id="main">
+      <!-- ======= About Section ======= -->
+      <section id="about" class="about">
+        <div class="container" data-aos="fade-up">
+          <div class="row">
+            <div
+              class="col-lg-6 order-1 order-lg-2"
+              data-aos="fade-left"
+              data-aos-delay="100"
+            >
+              <img src="../static/assets/img/isl.jpg" class="img-fluid" alt="" />
+            </div>
+            <div
+              class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content"
+              data-aos="fade-right"
+              data-aos-delay="100">
+              <h3>Indian Sign Language</h3><br>
+              <h4 class="fst-italic">
+                &emsp; &emsp; Nonverbal communication of hearing and speech impaired people 
+                is called sign language.
+              </h4>
+              <h4 style="text-align: justify">
+                A language that employs signs made with the hands and other movements, including facial expressions and postures of the body, used primarily by silent people.
+      
+              </h4>
+              <h4 style="text-align: justify">
+                Sign language has its significance and importance around the globe as 
+                approximately 70 million people in the world are deaf and mute and most of them are illiterate. 
+              </h4>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End About Section -->
+
+      <!-- ======= Text to Sign Section ======= -->
+      <section id="text2sign" style="padding-top: 80px" class="features">
+        <div class="container" data-aos="fade-up">
+          <div class="row zoom" style="background-color: #ffffff">
+            {% if video %}
+            <div class="col-lg-6 image p-0">
+              <video autoplay
+                width="100%"
+                src="{{video}}"
+                type="video/mp4"
+                controls
+                id="vid"
+              ></video>
+            </div>
+            {% else %}
+            <div
+              class="image col-lg-6"
+              style="background-image: url('../static/assets/img/sign.jpg')"
+              data-aos="fade-right"
+            ></div>
+            {% endif %}
+            <div
+              class="
+                col-lg-6
+                pt-4 pt-lg-0
+                order-2 order-lg-1
+                content
+                text-center
+              "
+              data-aos="fade-left"
+              data-aos-delay="100"
+              style="background-color: #ffffff"
+            >
+              <h2
+                class="pb-3"
+                style="
+                  margin-top: 2em;
+                  color: #000000;
+                  font-family: 'Kanit', sans-serif;
+                "
+              >
+                Text to Sign Conversion
+              </h2>
+              {% if alertt %}
+              <script>
+                var str = "{{alertt}}";
+                //alert(str);
+                setTimeout(function () {
+                  alert(str);
+                }, 1000);
+              </script>
+              {% endif %}
+              <form name="f1" action="/text_gest" method="post" enctype="multipart/form-data">
+                <div class="mb-2" style="color: #000000">
+                  <input
+                    type="file"
+                    accept=".txt"
+                    class="btn get-text-btn"
+                    name="textfile"
+                    id="textfile"
+                    color="#000000"
+                    opacity="1"
+                  /></div>
+                <button class="btn search-btn mt-3" 
+                type="submit"
+                onclick="this.form.action = '/text_gest'">
+                  Upload
+                </button>
+                <br/>
+                <div class="row" style="color: #000000">
+                  <div class="col-lg-1"></div>
+                  <div class="col-lg-3 pt-1">
+                    <label for="word"><strong>Enter a word :</strong></label>
+                  </div>
+                  <div class="col-lg-6">
+                    <input
+                      placeholder="Enter a word to be Searched"
+                      class="form-control"
+                      id="word"
+                      type="text"
+                      name="text"
+                      color="#000000"
+                      opacity="1"
+                    />
+                  </div>
+                </div>
+                <button class="btn search-btn mt-3" type="submit">
+                  Search
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Text to Sign Section -->
+
+      <!-- Sign to Text Section -->
+      <section id="sign2text" style="padding-top: 80px" class="features">
+        <div class="container" data-aos="fade-up">
+          <div class="row zoom" style="background-color: rgb(0, 0, 0)">
+            <div
+            class="image col-lg-6 p-0"
+            style="background-image: url('../static/assets/img/b.jpg')"
+            data-aos="fade-right"
+          >
+            {% if webcam %}
+            <img
+              class="image"
+              src="{{ url_for('video_feed') }}"
+              width="100%"
+            />
+            <a class="text-center close-btn" href="/#sign2text">X</a>
+            {% endif %} {% if upload %}
+            <img
+              class="image"
+              src="{{ url_for('video_feed1') }}"
+              width="100%"
+            />
+            <a class="text-center close-btn" href="/#sign2text">X</a>
+            <!-- <button>Close</button> -->
+            {% endif %}
+          </div>
+            <div
+              class="col-lg-6 pt-4 pt-lg-0 content text-center"
+              data-aos="fade-left"
+              data-aos-delay="100"
+            >
+              <h3
+                class="text-white pb-4"
+                style="margin-top: 100px; font-family: 'Kanit', sans-serif"
+              >
+                Sign to Text Conversion
+              </h3>
+              <form
+                action="/gest_text_upload"
+                method="post"
+                enctype="multipart/form-data"
+              >
+                <div class="mb-2">
+                  <input
+                    type="file"
+                    accept=".mp4"
+                    class="btn get-started-btn"
+                    name="f2"
+                    id="f2"
+                  />
+                </div>
+
+                <button
+                  style="width: 150px"
+                  class="btn get-started-btn"
+                  type="submit"
+                >
+                  <strong> Upload </strong>
+                </button>
+                <button
+                  style="width: 150px"
+                  class="btn get-started-btn"
+                  onclick="this.form.action = '/gest_text_cam'"
+                >
+                  <strong> Start Webcam </strong>
+                </button>
+              </form>
+              <br />
+              <blockquote class="blockquote pt-2">
+                <footer class="blockquote-footer">
+                  <cite title="Source Title"
+                    >Please make sure waist is visible</cite
+                  >
+                </footer>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </section>
+<!-- End Sign to Text Section -->
+
+
+<!-- ======= Team Section ======= -->
+  <div class="container">
+    <h3 class="heading">Our Team</h3>
+
+    <div class="profiles">
+      <div class="profile">
+        <img src="../static/assets/img/team/mem.jpg" class="profile-img">
+
+        <h3 class="user-name">Madhumitha</h3>
+      </div>
+      <div class="profile">
+        <img src="../static/assets/img/team/mem1.png" class="profile-img">
+
+        <h3 class="user-name">Meghana</h3>
+      </div>
+      <div class="profile">
+        <img src="../static/assets/img/team/mem3.jpg" class="profile-img">
+
+        <h3 class="user-name">Sahithi Niharika</h3>
+      </div>
+      <div class="profile">
+        <img src="../static/assets/img/team/mem4.jpg" class="profile-img">
+
+        <h3 class="user-name">Rohith</h3>
+      </div>
+      <div class="profile">
+        <img src="../static/assets/img/team/mem5.jpg" class="profile-img">
+
+        <h3 class="user-name">Ajay</h3>
+      </div>
+    </div>
+  </div>
+<!-- End Team Section -->
+    </main>
+    <!-- End #main -->
+
+    <div id="preloader"></div>
+    <a
+      href="#"
+      class="back-to-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <!-- Vendor JS Files -->
+    <script src="../static/assets/vendor/purecounter/purecounter.js"></script>
+    <script src="../static/assets/vendor/aos/aos.js"></script>
+    <script src="../static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="../static/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="../static/assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="../static/assets/js/main.js"></script>
+    <script>
+      var video = document.querySelector("#vid");
+      video.addEventListener("ended", function () {
+        video.parentNode.style.backgroundImage =
+          "url('../static/assets/img/sign.jpg')";
+        video.remove();
+      });
+    </script>
+  </body>
+</html>
