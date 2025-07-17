@@ -1,3 +1,4 @@
+# Two Way Indian Sign Language Translator using LSTM and NLP
 INTRODUCTION  
 There are approximately 70 million silent people across the world and most of them are illiterate and communicate using signs. The
 nonverbal communication used by silent people is called sign language, and it is comprised of various gestures, each gesture has its
