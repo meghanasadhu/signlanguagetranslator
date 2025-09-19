@@ -64,3 +64,9 @@ cd signlanguagetranslator
 # Install dependencies
 pip install -r requirements.txt
 
+#Training the LSTM Model
+python train_sign_to_text.py
+
+#Running the Application
+python app.py
+
